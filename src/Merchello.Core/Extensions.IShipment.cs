@@ -208,7 +208,7 @@ namespace Merchello.Core
         /// </returns>
         public static string ShipmentLineItemName(this IShipmentRateQuote shipmentRateQuote)
         {
-            return string.Format("Shipment - {0} - {1} items", shipmentRateQuote.ShipMethod.Name, shipmentRateQuote.Shipment.Items.Count);
+            return string.Format("Spedizione - {0} - {1} articoli", shipmentRateQuote.ShipMethod.Name, shipmentRateQuote.Shipment.Items.Count);
         }
 
 
