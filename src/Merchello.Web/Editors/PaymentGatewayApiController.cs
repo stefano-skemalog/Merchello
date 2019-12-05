@@ -108,7 +108,7 @@
             var provider = _paymentContext.GetProviderByKey(id);
             if (provider == null) throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
 
-            foreach (var method in provider.PaymentMethods)
+            foreach (var method in provider.PaymentMethods.ToList())
             {
                 // we need the actual PaymentGatewayProvider so we can grab the if present
                 yield return provider.GetPaymentGatewayMethodByKey(method.Key).ToPaymentMethodDisplay();
